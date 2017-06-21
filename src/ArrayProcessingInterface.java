@@ -1,6 +1,6 @@
 public interface ArrayProcessingInterface {
 
-    public void getLowestValueFromIntArray(ArrayList<Integer> array);
+    public Integer getLowestValueFromIntArray(int[] array);
 
-    public void getSecondLowestValueFromIntArray(ArrayList<Integer> array);
+    public Integer getSecondLowestValueFromIntArray(int[] array);
 }

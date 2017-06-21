@@ -4,28 +4,28 @@ public class ArrayProcessor implements ArrayProcessingInterface {
 	// 	array = intArray;
 	// }
 
-    public void getLowestValueFromIntArray(array) {
-        if(array == [] || array == null){
+    public Integer getLowestValueFromIntArray(int[] array) {
+        if(array.length == 0 || array == null){
         	return null;
         }
         else{
-        	ArrayList<Integer> orderedArray = orderArrayFromBiggestToLowest(array);
+        	int[] orderedArray = orderArrayFromBiggestToLowest(array);
         	return orderedArray[orderedArray.length];
-        };
+        }
     }
 
-    public void getSecondLowestValueFromIntArray(array) {
-        if(array == [] || array == null){
+    public Integer getSecondLowestValueFromIntArray(int[] array) {
+        if(array.length == 0 || array == null){
         	return null;
         }
         else{
-        	ArrayList<Integer> orderedArray = orderArrayFromBiggestToLowest(array);
+        	int[] orderedArray = orderArrayFromBiggestToLowest(array);
         	return orderedArray[orderedArray.length-1];
-        };
+        }
     }
 
-    public void orderArrayFromBiggestToLowest(array){
-    	ArrayList<Integer> sortedArray = new int[array.length]; 
+    public int[] orderArrayFromBiggestToLowest(int[] array){
+    	int[] sortedArray = new int[array.length]; 
 		boolean finishedSorting = false;
 		int pivot = array[(array.length/2)];
 		System.out.println("The pivot is " + pivot);
