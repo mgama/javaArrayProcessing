@@ -32,13 +32,13 @@ public class ArrayProcessorTest {
 //	      assertEquals(lowestValue, null);
 //	   }
 //
-//	   @Test
-//	   public void testSecondLowestValueMethodWithValidArray(){
-//	      // ArrayProcessor arrayProcessor = new ArrayProcessor();
-//	      int[] testArray = {5,4,7,8,9};
-//	      int secondLowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
-//	      assertEquals(secondLowestValue, 5);
-//	   }
+	   @Test
+	   public void testSecondLowestValueMethodWithValidArray(){
+	      // ArrayProcessor arrayProcessor = new ArrayProcessor();
+	      int[] testArray = {5,4,7,8,9};
+	      int secondLowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
+	      assertEquals(secondLowestValue, 5);
+	   }
 //
 //	   @Test
 //	   public void testSecondLowestValueMethodWithEmptyArray(){

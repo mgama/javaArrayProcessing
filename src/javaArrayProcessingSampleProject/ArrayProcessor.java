@@ -14,8 +14,10 @@ public class ArrayProcessor {
         	return null;
         }
         else{
-        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
-        	return orderedArray[orderedArray.length-1];
+//        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
+        	int[] orderedArray = bubbleSort(array);
+        	System.out.println("the lowest value is " + orderedArray[0]);
+        	return orderedArray[0];
         }
     }
 
@@ -26,8 +28,10 @@ public class ArrayProcessor {
         	return null;
         }
         else{
-        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
-        	return orderedArray[orderedArray.length-2];
+//        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
+        	int[] orderedArray = bubbleSort(array);
+        	System.out.println("the second lowest value is " + orderedArray[1]);
+        	return orderedArray[1];
         }
     }
 
@@ -80,9 +84,9 @@ public class ArrayProcessor {
 		return sortedArray;
     }
     
-    public int bubbleSort(int[] array){
+    public int[] bubbleSort(int[] array){
     	for (int i = (array.length - 1); i >= 0; i--){
-	      for (int j = 1; j ≤ i; j++)
+	      for (int j = 1; j < i; j++)
 	      {
 	         if (array[j-1] > array[j])
 	         {
