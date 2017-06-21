@@ -14,7 +14,7 @@ public class ArrayProcessor {
         	return null;
         }
         else{
-        	int[] orderedArray = orderArrayFromBiggestToLowest(array);
+        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
         	return orderedArray[orderedArray.length-1];
         }
     }
@@ -26,12 +26,12 @@ public class ArrayProcessor {
         	return null;
         }
         else{
-        	int[] orderedArray = orderArrayFromBiggestToLowest(array);
+        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
         	return orderedArray[orderedArray.length-2];
         }
     }
 
-    public int[] orderArrayFromBiggestToLowest(int[] array){
+    public int[] orderArrayFromLowestToBiggest(int[] array){
     	System.out.println("From the orderArrayFromBiggestToLowest");
     	int[] sortedArray = new int[array.length]; 
 		boolean finishedSorting = false;
