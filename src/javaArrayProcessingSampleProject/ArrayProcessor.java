@@ -11,6 +11,7 @@ public class ArrayProcessor {
     	System.out.println("From the getLowestValueFromIntArray");
     	System.out.println(Arrays.toString(array));
         if(array.length == 0 || array == null){
+        	System.out.println("Detected empty or null array, returning null");
         	return null;
         }
         else{
@@ -25,6 +26,7 @@ public class ArrayProcessor {
     	System.out.println("From the getSecondLowestValueFromIntArray");
     	System.out.println(Arrays.toString(array));
         if(array.length == 0 || array == null){
+        	System.out.println("Detected empty or null array, returning null");
         	return null;
         }
         else{
