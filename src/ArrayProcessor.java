@@ -1,3 +1,5 @@
+// package src;
+
 public class ArrayProcessor implements ArrayProcessingInterface {
 
 	// public ArrayProcessor(ArrayList<Integer> intArray){
