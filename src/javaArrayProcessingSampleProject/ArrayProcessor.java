@@ -10,7 +10,12 @@ public class ArrayProcessor {
     public Integer getLowestValueFromIntArray(int[] array) {
     	System.out.println("From the getLowestValueFromIntArray");
     	System.out.println(Arrays.toString(array));
-        if(array.length == 0 || array == null){
+//    	System.out.println("The array length is" + array.length);
+    	if(array == null){
+    		System.out.println("The array is null");
+    		return null;
+    	}
+        if(array.length == 0){
         	System.out.println("Detected empty or null array, returning null");
         	return null;
         }
@@ -25,7 +30,12 @@ public class ArrayProcessor {
     public Integer getSecondLowestValueFromIntArray(int[] array) {
     	System.out.println("From the getSecondLowestValueFromIntArray");
     	System.out.println(Arrays.toString(array));
-        if(array.length == 0 || array == null){
+//    	System.out.println("The array length is" + array.length);
+    	if(array == null){
+    		System.out.println("The array is null");
+    		return null;
+    	}
+        if(array.length == 0){
         	System.out.println("Detected empty or null array, returning null");
         	return null;
         }
