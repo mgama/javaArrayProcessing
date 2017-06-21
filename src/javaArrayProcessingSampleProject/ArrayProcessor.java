@@ -79,5 +79,21 @@ public class ArrayProcessor {
 		
 		return sortedArray;
     }
+    
+    public int bubbleSort(int[] array){
+    	for (int i = (array.length - 1); i >= 0; i--){
+	      for (int j = 1; j ≤ i; j++)
+	      {
+	         if (array[j-1] > array[j])
+	         {
+	              int temp = array[j-1];
+	              array[j-1] = array[j];
+	              array[j] = temp;
+	         } 
+	      } 
+    	}
+    	System.out.println("The new sorted array thru bubbleSort is " + Arrays.toString(array));
+    	return array;
+    }
 
 }
