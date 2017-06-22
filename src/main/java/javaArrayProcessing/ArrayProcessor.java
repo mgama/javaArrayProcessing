@@ -6,7 +6,7 @@ public class ArrayProcessor {
 
     public Integer getLowestValueFromIntArray(int[] array) {
     	System.out.println("From the getLowestValueFromIntArray");
-    	System.out.println(Arrays.toString(array));
+//    	System.out.println(Arrays.toString(array));//For Debug Only
     	if(array == null){
     		System.out.println("The array is null");
     		return null;
@@ -18,21 +18,19 @@ public class ArrayProcessor {
         if(array.length == 1){
         	return array[0];
         }
-        else{
-        	if(array.length > 1){
-	        	System.out.println("The array length is" + array.length);
-	//        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
-	        	int[] orderedArray = bubbleSort(array);
-	        	System.out.println("the lowest value is " + orderedArray[0]);
-	        	return orderedArray[0];
-        	}
-        	return null;
-        }
+    	if(array.length > 1){
+        	System.out.println("The array length is" + array.length);
+//        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
+        	int[] orderedArray = bubbleSort(array);
+        	System.out.println("the lowest value is " + orderedArray[0]);
+        	return orderedArray[0];
+    	}
+    	throw new IllegalArgumentException("Error: The argument passed is not an array of Integers");
     }
 
     public Integer getSecondLowestValueFromIntArray(int[] array) {
     	System.out.println("From the getSecondLowestValueFromIntArray");
-    	System.out.println(Arrays.toString(array));
+//    	System.out.println(Arrays.toString(array));//For Debug Only
     	if(array == null){
     		System.out.println("The array is null");
     		return null;
@@ -45,16 +43,14 @@ public class ArrayProcessor {
         	System.out.println("Warning: Only 1 int value was passed, at least 2 ints are required. Throwing IllegalArtumentException");
         	throw new IllegalArgumentException("Only 1 int value was passed, at least 2 ints are required");
         }
-        else{
-        	if(array.length > 1){
-	        	System.out.println("The array length is" + array.length);
-	//        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
-	        	int[] orderedArray = bubbleSort(array);
-	        	System.out.println("the second lowest value is " + orderedArray[1]);
-	        	return orderedArray[1];
-        	}
-        	return null;
-        }
+    	if(array.length > 1){
+        	System.out.println("The array length is" + array.length);
+//        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
+        	int[] orderedArray = bubbleSort(array);
+        	System.out.println("the second lowest value is " + orderedArray[1]);
+        	return orderedArray[1];
+    	}
+    	throw new IllegalArgumentException("Error: The argument passed is not an array of Integers");
     }
 
 /*    public int[] orderArrayFromLowestToBiggest(int[] array){
