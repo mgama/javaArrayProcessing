@@ -48,6 +48,34 @@ public class ArrayProcessorTest {
       int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
       assertEquals(lowestValue, 13);
    }
+   
+   @Test
+   public void testLowestValueMethodWithValidArrayWithNegativeAndPositiveInts(){
+      int[] testArray = {13,-1,-5,0};
+      int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, -5);
+   }
+   
+   @Test
+   public void testLowestValueMethodWithValidArrayWithNegativeAndPositiveIntsBoundaryLimits(){
+      int[] testArray = {13,-1,-5,0,1000,5000,-999999999};
+      int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, -999999999);
+   }
+   
+   @Test
+   public void testLowestValueMethodWithValidArrayWithOnlyNegativeInts(){
+      int[] testArray = {-13,-1,-5,-255};
+      int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, -255);
+   }
+   
+   @Test
+   public void testLowestValueMethodWithValidArrayWithOnlyNegativeInts2BoundaryLimits(){
+      int[] testArray = {-13,-1,-5,-255,-9999,-999999999};
+      int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue,-999999999);
+   }
 
    @Test
    public void testLowestValueMethodWithEmptyArray(){
@@ -97,10 +125,36 @@ public class ArrayProcessorTest {
    
    @Test(expected = IllegalArgumentException.class)
    public void testSecondLowestValueMethodWithValidArrayOnly1Int(){
-      int[] testArray = {255};
-//      int secondLowestValue = 
+      int[] testArray = {255}; 
       arrayProcessor.getSecondLowestValueFromIntArray(testArray);
-//      assertEquals(secondLowestValue, 255);
+   }
+   
+   @Test
+   public void testSecondLowestValueMethodWithValidArrayWithNegativeAndPositiveInts(){
+      int[] testArray = {13,-1,-5,0};
+      int lowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, -1);
+   }
+   
+   @Test
+   public void testSecondLowestValueMethodWithValidArrayWithNegativeAndPositiveIntsBoundaryLimits(){
+      int[] testArray = {13,-1,-5,0,1000,5000,-999999998,-999999999};
+      int lowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, -999999998);
+   }
+   
+   @Test
+   public void testSecondLowestValueMethodWithValidArrayWithOnlyNegativeInts(){
+      int[] testArray = {-13,-1,-5,-255};
+      int lowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, -13);
+   }
+   
+   @Test
+   public void testSecondLowestValueMethodWithValidArrayWithOnlyNegativeInts2BoundaryLimits(){
+      int[] testArray = {-13,-1,-5,-255,-999999998,-999999999};
+      int lowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue,-999999998);
    }
 
    @Test
