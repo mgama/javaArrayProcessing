@@ -1,4 +1,3 @@
-package javaArrayProcessingSampleProject;
 import java.util.Arrays;
 
 public class ArrayProcessor {

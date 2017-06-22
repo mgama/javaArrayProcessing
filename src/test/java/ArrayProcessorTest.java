@@ -1,9 +1,7 @@
-package javaArrayProcessingSampleProject;
-
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import javaArrayProcessingSampleProject.ArrayProcessor;
+import ArrayProcessor;
 
 public class ArrayProcessorTest {
 
