@@ -27,6 +27,27 @@ public class ArrayProcessorTest {
       int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
       assertEquals(lowestValue, 1);
    }
+   
+   @Test
+   public void testLowestValueMethodWithValidArray4(){
+      int[] testArray = {13,25,78,92,11,12,10,100,200,355,1000,1,5000,9999,0,770,123,456,879,234};
+      int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, 0);
+   }
+   
+   @Test
+   public void testLowestValueMethodWithValidArrayOnly2Ints(){
+      int[] testArray = {13,25};
+      int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, 13);
+   }
+   
+   @Test
+   public void testLowestValueMethodWithValidArrayOnly1Int(){
+      int[] testArray = {13};
+      int lowestValue = arrayProcessor.getLowestValueFromIntArray(testArray);
+      assertEquals(lowestValue, 13);
+   }
 
    @Test
    public void testLowestValueMethodWithEmptyArray(){
@@ -58,6 +79,28 @@ public class ArrayProcessorTest {
       int[] testArray = {13,25,78,92,11,9,99,100,5000,0,2,10000};
       int secondLowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
       assertEquals(secondLowestValue, 2);
+   }
+   
+   @Test
+   public void testSecondLowestValueMethodWithValidArray4(){
+      int[] testArray = {13,25,78,92,11,9,99,100,5000,0,2,10000,101,999,1,7543,918764};
+      int secondLowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
+      assertEquals(secondLowestValue, 1);
+   }
+   
+   @Test
+   public void testSecondLowestValueMethodWithValidArrayOnly2Ints(){
+      int[] testArray = {255,111};
+      int secondLowestValue = arrayProcessor.getSecondLowestValueFromIntArray(testArray);
+      assertEquals(secondLowestValue, 255);
+   }
+   
+   @Test(expected = IllegalArgumentException.class)
+   public void testSecondLowestValueMethodWithValidArrayOnly1Int(){
+      int[] testArray = {255};
+//      int secondLowestValue = 
+      arrayProcessor.getSecondLowestValueFromIntArray(testArray);
+//      assertEquals(secondLowestValue, 255);
    }
 
    @Test
