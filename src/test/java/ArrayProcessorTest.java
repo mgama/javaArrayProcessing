@@ -1,3 +1,7 @@
+/**
+ * @author      Manuel Gama <mgamamsc@gmail.com>
+ */
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 

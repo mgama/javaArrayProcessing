@@ -1,3 +1,7 @@
+/**
+ * @author      Manuel Gama <mgamamsc@gmail.com>
+ */
+
 package javaArrayProcessing;
 
 public interface ArrayProcessingInterface {

@@ -1,9 +1,21 @@
+/**
+ * @author      Manuel Gama <mgamamsc@gmail.com>
+ */
+
 package javaArrayProcessing;
 
 import java.util.Arrays;
 
 public class ArrayProcessor {
 
+	/**
+	 * Returns the lowest value from an array of integers
+	 *
+	 * @param  array  an array of integers
+	 * @return returns the lowest value from the array of integers passed to the function
+	 * @return null returns null if the passed array of integers is either empty or null
+	 * @throws IllegalArgumentException Only if an invalid argument is passed to the function
+	 */
     public Integer getLowestValueFromIntArray(int[] array) {
     	System.out.println("From the getLowestValueFromIntArray");
 //    	System.out.println(Arrays.toString(array));//For Debug Only
@@ -20,6 +32,7 @@ public class ArrayProcessor {
         }
     	if(array.length > 1){
         	System.out.println("The array length is" + array.length);
+        	System.out.println(Arrays.toString(array));//For Debug Only
 //        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
         	int[] orderedArray = bubbleSort(array);
         	System.out.println("the lowest value is " + orderedArray[0]);
@@ -28,6 +41,15 @@ public class ArrayProcessor {
     	throw new IllegalArgumentException("Error: The argument passed is not an array of Integers");
     }
 
+    /**
+	 * Returns the lowest value from an array of integers
+	 *
+	 * @param  array  an array of integers
+	 * @return returns the second lowest value from the array of integers passed to the function
+	 * @return null returns null if the passed array of integers is either empty or null
+	 * @throws IllegalArgumentException If only 1 integer is passed to the function
+	 * @throws IllegalArgumentException Only if an invalid argument is passed to the function
+	 */
     public Integer getSecondLowestValueFromIntArray(int[] array) {
     	System.out.println("From the getSecondLowestValueFromIntArray");
 //    	System.out.println(Arrays.toString(array));//For Debug Only
@@ -45,6 +67,7 @@ public class ArrayProcessor {
         }
     	if(array.length > 1){
         	System.out.println("The array length is" + array.length);
+        	System.out.println(Arrays.toString(array));//For Debug Only
 //        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
         	int[] orderedArray = bubbleSort(array);
         	System.out.println("the second lowest value is " + orderedArray[1]);
@@ -102,6 +125,12 @@ public class ArrayProcessor {
 		return sortedArray;
     }*/
     
+    /**
+	 * Returns an array of integers that has been sorted via a bubble sort methodology
+	 *
+	 * @param  array  an array of integers
+	 * @return array returns the same array passed but in order from lowest to highest
+	 */
     public int[] bubbleSort(int[] array){
     	for (int i = (array.length - 1); i >= 0; i--){
 	      for (int j = 1; j <= i; j++)
