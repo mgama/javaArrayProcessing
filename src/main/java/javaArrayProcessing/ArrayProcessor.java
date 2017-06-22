@@ -1,15 +1,12 @@
+package javaArrayProcessing;
+
 import java.util.Arrays;
 
 public class ArrayProcessor {
-	
-	// public ArrayProcessor(ArrayList<Integer> intArray){
-		// 	array = intArray;
-		// }
 
     public Integer getLowestValueFromIntArray(int[] array) {
     	System.out.println("From the getLowestValueFromIntArray");
     	System.out.println(Arrays.toString(array));
-//    	System.out.println("The array length is" + array.length);
     	if(array == null){
     		System.out.println("The array is null");
     		return null;
@@ -19,6 +16,7 @@ public class ArrayProcessor {
         	return null;
         }
         else{
+        	System.out.println("The array length is" + array.length);
 //        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
         	int[] orderedArray = bubbleSort(array);
         	System.out.println("the lowest value is " + orderedArray[0]);
@@ -29,7 +27,6 @@ public class ArrayProcessor {
     public Integer getSecondLowestValueFromIntArray(int[] array) {
     	System.out.println("From the getSecondLowestValueFromIntArray");
     	System.out.println(Arrays.toString(array));
-//    	System.out.println("The array length is" + array.length);
     	if(array == null){
     		System.out.println("The array is null");
     		return null;
@@ -39,6 +36,7 @@ public class ArrayProcessor {
         	return null;
         }
         else{
+        	System.out.println("The array length is" + array.length);
 //        	int[] orderedArray = orderArrayFromLowestToBiggest(array);
         	int[] orderedArray = bubbleSort(array);
         	System.out.println("the second lowest value is " + orderedArray[1]);

@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import ArrayProcessor;
+import javaArrayProcessing.ArrayProcessor;
 
 public class ArrayProcessorTest {
 
