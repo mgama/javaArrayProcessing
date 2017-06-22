@@ -44,7 +44,7 @@ public class ArrayProcessor {
         }
     }
 
-    public int[] orderArrayFromLowestToBiggest(int[] array){
+/*    public int[] orderArrayFromLowestToBiggest(int[] array){
     	System.out.println("From the orderArrayFromBiggestToLowest");
     	int[] sortedArray = new int[array.length]; 
 		boolean finishedSorting = false;
@@ -91,7 +91,7 @@ public class ArrayProcessor {
 		System.out.println("After the second loop the sortedArray" + Arrays.toString(sortedArray));
 		
 		return sortedArray;
-    }
+    }*/
     
     public int[] bubbleSort(int[] array){
     	for (int i = (array.length - 1); i >= 0; i--){
