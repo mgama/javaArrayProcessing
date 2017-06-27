@@ -150,5 +150,26 @@ public class ArrayProcessor {
     	System.out.println("The new sorted array thru bubbleSort is " + Arrays.toString(array));
     	return array;
     }
+    
+    /**
+	 * Returns a boolean value whether there is a duplicate value or not 
+	 * from the array of integers passed to the function
+	 *
+	 * @param  array  an array of integers
+	 * @return boolean returns true if a duplicate value was found inside the array, otherwise it returns false
+	 */
+    public boolean hasDuplicateValues(int[] array){
+    	boolean foundDuplicateValue = false;
+    	for(int i = 0; i < array.length -1;i++){
+    		for(int j = i + 1; j < array.length; j++){
+    			System.out.println("Comparing " + array[i] + " with " + array[j]);
+    			if(array[i] == array[j]){
+    				foundDuplicateValue = true;
+    				System.out.println("Found a duplicate value in the array");
+    			}
+    		}
+    	}
+    	return foundDuplicateValue;
+    }
 
 }

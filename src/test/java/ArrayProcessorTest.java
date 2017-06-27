@@ -171,5 +171,19 @@ public class ArrayProcessorTest {
    public void testSecondLowestValueMethodWithNullArray(){
       assertEquals(arrayProcessor.getSecondLowestValueFromIntArray(null), null);
    }
+   
+   @Test
+   public void testDuplicateValuesWithOneDuplicateValueInArray(){
+	   int[] testArray = {1,2,3,4,5,1};
+	   assertEquals(arrayProcessor.hasDuplicateValues(testArray), true);
+   }
+   
+   @Test
+   public void testDuplicateValuesWithNoDuplicateValuesInArray(){
+	   int[] testArray = {1,2,3,4,5,6};
+	   assertEquals(arrayProcessor.hasDuplicateValues(testArray), false);
+   }
+   
+   
 
 }
